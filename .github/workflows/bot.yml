@@ -11,7 +11,7 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -20,10 +20,10 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        pip install python-telegram-bot
         
     - name: Run Telegram Bot
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       run: |
-        python new.py
+        python now.py   
